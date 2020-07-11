@@ -7,14 +7,12 @@ import sys
 # Complete the getMoneySpent function below.
 #
 def getMoneySpent(keyboards, drives, b):
-    min_diff = 0
+    min_diff = -1
     for k in keyboards:
         for d in drives:
             cost = k + d
             if (cost <= b) and (cost > min_diff):
                 min_diff = cost
-    if min_diff == 0:
-        return -1
     return min_diff
 
 
